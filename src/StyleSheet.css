@@ -1,33 +1,56 @@
+h1{
+    margin: 0;
+}
+
+h2{
+    margin: 0 0 5vh 0;
+}
+
 .pokedex__container{
     margin: 0 auto;
-    border: 1px solid red;
     background-color: #D65046;
-    width: 50vw;
+    width: 40vw;
     height: 60vh;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow:  0px 0px 30px 0px #D51111 inset;
+    display: flex;
+    flex-direction: row;
 }
 
 .pokedex__screen{
-    width: 30vw;
+    width: 20vw;
     height: 30vh;
     background-color: #6BCAD7;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokedex__screen-border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #9D9A9A;
     border-radius: 5px;
-    padding: 20px;
+    padding: 2vw;
+    box-shadow: 0px 0px 30px #DEDEDE inset;
 }
 
 .pokedex__screen-content{
     display: flex;
     flex-direction: column;
 }
+
+/* .pokedex__screen-content img{
+    width: 8vw;
+} */
+
+.pokedex__screen-content h3{ margin: 0; margin-bottom: 1vh;}
 
 #circle{
     width: 50px; height: 50px;
@@ -37,14 +60,143 @@
 }
 
 form{
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
 }
 
 form #text{
     border: none;
+    border-radius: 15px;
     width: 16vw;
+    height: 5vh;
+    /* box-shadow: 0px 0px 30px #D3D3D3 inset; */
+    background-color: #6BCAD7;
+    margin-right: 10px;
 }
 
-form #search{
+/* form #search{
     border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+} */
+
+/* #search img{
+    width: 30px;
+} */
+
+#pokeLoad{
+    width: 70px;
+    animation: ball 1.5s infinite;
 }
+
+.buttonsChange{
+    margin-left: 4vw;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+}
+
+.buttonsChange button{
+    margin-bottom: 10px;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#pokemonIMG{
+    width: 10vw;
+}
+
+@keyframes ball{
+    0%{
+        /* transform: translateY(-10px); */
+        transform: rotate(180deg);
+    }
+    20%{
+        transform: translateY(-10px);
+    }
+    100% {
+        
+        transform: rotate(360deg);
+    }
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width:500px), (max-height:500px){
+
+    form{
+        margin-bottom: 8px;
+    }
+
+    form #text{
+        height: 25px;
+    }
+
+    .pokedex__container{
+        width: 420px; height: 280px;
+    }
+
+    .pokedex__screen{
+        width: 250px; height: 150px;
+    }
+
+    .pokedex__screen-border{
+        width: 260px;
+    }
+
+    #pokemonIMG{
+        width: 15vw;
+    }
+}
+
+@media (max-width:500px) {
+
+    form{
+        margin-bottom: 8px;
+    }
+
+    form #text{
+        height: 25px;
+    }
+
+    .pokedex__container{
+        width: 270px;
+        height: 375px;
+        flex-direction: column;
+    }
+
+    .pokedex__screen-border{
+        width: 180px;
+        height: 190px;
+    }
+
+    .pokedex__screen{
+        width: 150px;
+        height: 180px;
+    }
+
+    .pokedex__screen-content h3{ margin: 0; }
+
+    .buttonsChange{
+        width: 20vw;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* .buttonsChange button{
+        margin-left: 5vw;
+    } */
+
+    #pokemonIMG{
+        width: 30vw;
+    }
+}
+
