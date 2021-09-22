@@ -5,22 +5,6 @@ import './App.css';
 import React, { useState } from 'react';
 import Pokedex from 'pokedex-promise-v2';
 import { useForm } from 'react-hook-form';
-// import LinkedIn from './assets/linkedin.svg';
-// import GitHub from './assets/signo-de-github.svg';
-// import Portfolio from './assets/portfolio.svg';
-
-// function Footer() {
-//   return (
-//     <footer>
-//       <span>App created by Matías Herrera, visit:</span>
-//       <div>
-//         <a href={'https://www.linkedin.com/in/matías-facundo-herrera-5830b7200/'} target="_blank" rel="noreferrer"><img src={LinkedIn} alt="linkedin" /></a>
-//         <a href={'https://github.com/mati7122'} target="_blank" rel="noreferrer"><img src={GitHub} alt="github" /></a>
-//         <a href={'https://portfolio-psi-kohl-25.vercel.app'} target="_blank" rel="noreferrer"><img src={Portfolio} alt="portfolio" /></a>
-//       </div>
-//     </footer>
-//   );
-// }
 
 function Screen(props) {
   return (
@@ -30,15 +14,6 @@ function Screen(props) {
     </div>
   );
 }
-
-// function Buttons(props) {
-//   return (
-//     <div className="buttonsChange">
-//       <button onClick={() => props.front}>A</button>
-//       <button onClick={() => props.back}>B</button>
-//     </div>
-//   );
-// }
 
 function App() {
 
