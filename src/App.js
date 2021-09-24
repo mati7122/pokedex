@@ -22,7 +22,7 @@ function App() {
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
     const fetch = async () => {
-      const resp = await P.getPokemonByName(data.pokemon);
+      const resp = await P.getPokemonByName(data.pokemon.toLowerCase());
       setState(resp);
       setPoke(resp.sprites.front_default);
       console.log(resp);
